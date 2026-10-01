@@ -6,3 +6,4 @@ Frameworks being used for project:
 * React (front-end)
 * PostgreSQL (database)
 * Spring Data JPA (handle database operations within Java)
+* React Native (mobile development framework)
