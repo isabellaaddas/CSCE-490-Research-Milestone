@@ -1,6 +1,7 @@
 package com.researchmilestone.store;
 
-import org.springframework.web.bind.annotation.Controller;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 // Use home controller for handling root website requests
 @Controller
