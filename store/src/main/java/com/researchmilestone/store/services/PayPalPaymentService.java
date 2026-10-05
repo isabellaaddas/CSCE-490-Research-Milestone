@@ -1,4 +1,4 @@
-package com.researchmilestone.store;
+package com.researchmilestone.store.services;
 
 import org.springframework.stereotype.Service;
 
