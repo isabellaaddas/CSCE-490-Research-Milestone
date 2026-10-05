@@ -8,7 +8,13 @@ public class OrderService {
         this.paymentService = paymentService;
     }
 
+    // Place an order using the payment service
     public void placeOrder() {
         this.paymentService.processPayment(10.0);
+    }
+
+    // Setter for payment service
+    public void setPaymentService(PaymentService paymentService) {
+        this.paymentService = paymentService;
     }
 }
