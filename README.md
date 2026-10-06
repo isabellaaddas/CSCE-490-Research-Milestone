@@ -6,4 +6,5 @@ Frameworks being used for project:
 * React (front-end) - Tutorial (for integrating React and Spring Boot together) https://www.geeksforgeeks.org/advance-java/introduction-to-react-spring-boot-integration/
 * PostgreSQL (database)
 * Spring Data JPA (handle database operations within Java)
-* Maven (build tool for web app)
+* Maven (build tool for web app backend)
+* npm (package manager for frontend)
