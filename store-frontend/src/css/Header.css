@@ -1,0 +1,10 @@
+#store-header {
+    padding:1px;
+    padding-right:3em;
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+}
+
+#store-header {
+    text-align: right;
+}
