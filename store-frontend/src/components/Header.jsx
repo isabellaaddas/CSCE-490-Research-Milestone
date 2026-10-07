@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <header id="store-header" class="flex">
             <Navigation />
-            <h1 className="one">Coffee Shop</h1>
+            <h1 className="two">Coffee Shop</h1>
         </header>
     );
 };

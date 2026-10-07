@@ -1,17 +1,20 @@
 #store-nav-toggle {
-    width:min-content;
-    padding:5px;
+    width: min-content;
+    padding: 10px 0;
 }
 
 #store-nav-toggle div {
     width: 2em;
     height: 2px;
     background-color: var(--quaternary-color);
-    margin:4px 0;
+    margin:5px 0;
 }
 
 #store-nav-items li {
     color: var(--background-color);
+    padding-right: 2em;
+    padding-bottom: 15px;
+    font-size:80%;
 }
 
 /* Resolution */
