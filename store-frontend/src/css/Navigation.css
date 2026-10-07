@@ -1,4 +1,17 @@
+#store-nav-toggle {
+    padding:5px;
+}
 
+#store-nav-toggle div {
+    width:5px;
+    height:2px;
+    color: var(--quaternary-color);
+    margin:4px 0;
+}
+
+#store-nav-items li {
+    color: var(--background-color);
+}
 
 /* Resolution */
 @media only screen and (orientation:landscape) {

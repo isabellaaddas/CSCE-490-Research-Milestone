@@ -19,10 +19,47 @@ body {
 }
 
 ul {
-    list-style-type:none;
-    padding-left:0;
+  list-style-type:none;
+  padding-left:0;
 }
 
 img {
-    max-width:100%;
+  max-width:100%;
+}
+
+/* Basic classes */
+.link {
+  text-decoration:none;
+}
+
+.hide-small {
+  display:none;
+}
+
+.hidden {
+  display:none;
+}
+
+/* Flex-related classes */
+.flex {
+  display: flex;
+}
+
+.one {
+  flex:1;
+}
+
+.two {
+  flex:2;
+}
+
+/* Resolution */
+@media only screen and (orientation:landscape) {
+  .columns {
+    display:flex;
+  }
+
+  .hide-small {
+    display:flex;
+  }
 }

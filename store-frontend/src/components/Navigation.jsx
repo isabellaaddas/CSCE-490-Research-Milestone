@@ -13,14 +13,16 @@ const Navigation = () => {
 
     return (
         <nav id="store-nav">
-            <div id="store-nav-toggle" onClick={toggleNav}>
+            <div onClick={toggleNav} id="store-nav-toggle">
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
 
-            <ul id="store-nav-items">
-
+            <ul id="store-nav-items" className={menuOpen ? "columns":"columns hide-small"}>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/orderonline">Order Online</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </nav>
     );

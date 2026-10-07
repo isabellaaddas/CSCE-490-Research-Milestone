@@ -3,6 +3,7 @@
     padding-right:3em;
     background-color: var(--secondary-color);
     color: var(--background-color);
+    justify-content:space-evenly;
 }
 
 #store-header {

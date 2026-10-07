@@ -1,8 +1,10 @@
+import Navigation from './Navigation';
 import '../css/Header.css';
 
 const Header = () => {
     return (
-        <header id="store-header">
+        <header id="store-header" class="flex">
+            <Navigation />
             <h1>Coffee Shop</h1>
         </header>
     );
