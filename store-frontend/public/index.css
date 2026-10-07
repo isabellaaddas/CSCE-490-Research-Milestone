@@ -8,36 +8,38 @@
 }
 
 html, body {
-  height:100%;
-  margin:0;
-  padding:0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: var(--background-color);
 }
 
 ul {
-  list-style-type:none;
-  padding-left:0;
+  list-style-type: none;
+  padding-left: 0;
+  margin:0;
 }
 
 img {
-  max-width:100%;
+  max-width: 100%;
 }
 
 /* Basic classes */
 .link {
-  text-decoration:none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hide-small {
-  display:none;
+  display: none;
 }
 
 .hidden {
-  display:none;
+  display: none;
 }
 
 /* Flex-related classes */
@@ -46,11 +48,11 @@ img {
 }
 
 .one {
-  flex:1;
+  flex: 1;
 }
 
 .two {
-  flex:2;
+  flex: 2;
 }
 
 /* Resolution */

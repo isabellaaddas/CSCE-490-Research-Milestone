@@ -12,7 +12,7 @@ const Navigation = () => {
     }
 
     return (
-        <nav id="store-nav">
+        <nav id="store-nav" className="one">
             <div onClick={toggleNav} id="store-nav-toggle">
                 <div></div>
                 <div></div>
@@ -20,9 +20,9 @@ const Navigation = () => {
             </div>
 
             <ul id="store-nav-items" className={menuOpen ? "columns":"columns hide-small"}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/orderonline">Order Online</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link className="link" to="/">Home</Link></li>
+                <li><Link className="link" to="/orderonline">Order Online</Link></li>
+                <li><Link className="link" to="/contact">Contact</Link></li>
             </ul>
         </nav>
     );

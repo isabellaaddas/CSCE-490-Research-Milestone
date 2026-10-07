@@ -1,11 +1,12 @@
 #store-nav-toggle {
+    width:min-content;
     padding:5px;
 }
 
 #store-nav-toggle div {
-    width:5px;
-    height:2px;
-    color: var(--quaternary-color);
+    width: 2em;
+    height: 2px;
+    background-color: var(--quaternary-color);
     margin:4px 0;
 }
 
