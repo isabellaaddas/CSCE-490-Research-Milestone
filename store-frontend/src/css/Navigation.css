@@ -1,0 +1,8 @@
+
+
+/* Resolution */
+@media only screen and (orientation:landscape) {
+    #store-nav-toggle {
+        display: none; /* Hidden on desktop */
+    }
+}
