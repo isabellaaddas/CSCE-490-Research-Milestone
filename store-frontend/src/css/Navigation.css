@@ -7,19 +7,24 @@
     width: 2em;
     height: 2px;
     background-color: var(--quaternary-color);
-    margin:5px 0;
+    margin: 5px 0;
 }
 
 #store-nav-items li {
     color: var(--background-color);
     padding-right: 2em;
     padding-bottom: 15px;
-    font-size:80%;
+    font-size: 80%;
 }
 
 /* Resolution */
 @media only screen and (orientation:landscape) {
     #store-nav-toggle {
         display: none; /* Hidden on desktop */
+    }
+
+    #store-nav-items li {
+        font-size: 100%;
+        padding-bottom: 0;
     }
 }
