@@ -1,3 +1,4 @@
+import Menu from './../components/Menu';
 import './../css/Home.css';
 
 const Home = () => {
@@ -16,6 +17,8 @@ const Home = () => {
                     <p>We're located in the heart of downtown. Stop by for the best coffee in town!</p>
                 </div>
             </div>
+
+            <Menu />
         </main>
     );
 };
