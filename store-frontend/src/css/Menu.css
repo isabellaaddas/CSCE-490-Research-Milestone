@@ -1,0 +1,11 @@
+#store-menu {
+    margin: 15px;
+    padding: 1.5em;
+    background-color: var(--primary-color);
+    border: 2px solid var(--quaternary-color);
+}
+
+#store-menu h2 {
+    text-align: center;
+    color: var(--background-color);
+}

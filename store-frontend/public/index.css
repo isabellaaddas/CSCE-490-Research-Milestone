@@ -1,10 +1,11 @@
 /* Universal structure and styling */
 :root {
-  --background-color: #e6e6e6;
+  --background-color: #ffffff;
   --primary-color: #bda593;
   --secondary-color: #1b1b1b;
   --tertiary-color: #d1b599;
   --quaternary-color: #866060;
+  --quinary-color: #e6e6e6;
 }
 
 html, body {

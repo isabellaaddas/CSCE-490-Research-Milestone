@@ -1,7 +1,11 @@
+#store-home {
+    font-size: 80%;
+}
+
 .pretty-container {
     padding: 1.5em;
     margin: 15px;
     background-color: var(--tertiary-color);
-    border:2px solid var(--quaternary-color);
+    border: 2px solid var(--quaternary-color);
     border-radius: 5px;
 }
