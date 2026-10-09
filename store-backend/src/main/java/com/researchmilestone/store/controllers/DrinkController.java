@@ -26,7 +26,7 @@ public class DrinkController {
 
     // GET request with path variable (id)
     @GetMapping("/{id}")
-    public Drink getDrinkById(@PathVariable Long id) {
+    public Drink getDrinkById(@PathVariable int id) {
         return drinkService.getDrinkById(id);
     }
 }
