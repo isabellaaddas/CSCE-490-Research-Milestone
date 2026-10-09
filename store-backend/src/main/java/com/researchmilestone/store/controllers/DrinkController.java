@@ -21,14 +21,12 @@ public class DrinkController {
     // GET request
     @GetMapping
     public List<Drink> getAllDrinks() {
-        List<Drink> drinks = drinkService.getAllDrinks();
-        return ResponseEntity.ok(drinks);
+        return drinkService.getAllDrinks();
     }
 
     // GET request with path variable (id)
     @GetMapping("/{id}")
     public Drink getDrinkById(@PathVariable Long id) {
-        Drink drink = drinkService.getDrinkById(id);
-        return ResponseEntity.ok(drink);
+        return drinkService.getDrinkById(id);
     }
 }
