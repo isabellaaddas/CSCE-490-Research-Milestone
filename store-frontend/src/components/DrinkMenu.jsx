@@ -4,7 +4,7 @@ import {useLocation} from 'react-router-dom';
 import axios from 'axios';
 import './../css/DrinkMenu.css';
 
-const DrinkMenu = (context) => {
+const DrinkMenu = ({context}) => {
     const location = useLocation();
     const [drinks, setDrinks] = useState([]);
 
