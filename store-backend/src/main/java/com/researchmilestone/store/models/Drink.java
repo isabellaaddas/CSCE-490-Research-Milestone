@@ -1,7 +1,11 @@
 // Model class for Drink entity on the backend
 package com.researchmilestone.store.models;
 
-import jakarta.persistence.*;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.persistence.Entity;
 
 // Entity annotation to specify an entity class
 // Table annotation to specify the table name in 
@@ -14,10 +18,8 @@ public class Drink {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
     private double price;
 
     // Constructors
@@ -27,6 +29,16 @@ public class Drink {
     public Drink(String name, double price) {
         this.name = name;
         this.price = price;
+    }
+
+    // Method to return string representation (test)
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "id=" + id +
+                ", name='" + name + "\'" +
+                ", price=" + price +
+                "}";
     }
 
     // Getters and Setters
