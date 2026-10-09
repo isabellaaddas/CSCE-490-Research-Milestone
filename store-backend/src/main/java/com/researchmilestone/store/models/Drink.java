@@ -13,7 +13,6 @@ import jakarta.persistence.Entity;
 @Entity
 @Table(name = "drinks")
 public class Drink {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -29,16 +28,6 @@ public class Drink {
     public Drink(String name, double price) {
         this.name = name;
         this.price = price;
-    }
-
-    // Method to return string representation (test)
-    @Override
-    public String toString() {
-        return "Drink{" +
-                "id=" + id +
-                ", name='" + name + "\'" +
-                ", price=" + price +
-                "}";
     }
 
     // Getters and Setters
