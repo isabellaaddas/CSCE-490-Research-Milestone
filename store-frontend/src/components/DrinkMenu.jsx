@@ -2,7 +2,7 @@ import DrinkItem from './DrinkItem';
 import {useState, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
 import axios from 'axios';
-import './../css/Menu.css';
+import './../css/DrinkMenu.css';
 
 const Menu = () => {
     const location = useLocation();

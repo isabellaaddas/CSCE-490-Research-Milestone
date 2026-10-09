@@ -1,4 +1,4 @@
-import Menu from './../components/Menu';
+import DrinkMenu from './../components/DrinkMenu';
 import './../css/Home.css';
 
 const Home = () => {
@@ -18,7 +18,7 @@ const Home = () => {
                 </div>
             </div>
 
-            <Menu />
+            <DrinkMenu />
         </main>
     );
 };
