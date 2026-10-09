@@ -1,4 +1,5 @@
 import {useState} from "react";
+import './../css/DrinkItemButtons.css';
 
 const DrinkItemButtons = () => {
     const [counter, setCounter] = useState(0);

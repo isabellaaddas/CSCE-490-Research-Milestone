@@ -4,7 +4,7 @@ import {useLocation} from 'react-router-dom';
 import axios from 'axios';
 import './../css/DrinkMenu.css';
 
-const Menu = () => {
+const DrinkMenu = (context) => {
     const location = useLocation();
     const [drinks, setDrinks] = useState([]);
 
@@ -27,7 +27,8 @@ const Menu = () => {
                         <DrinkItem  key={drink.id}
                                     id={drink.id}
                                     name={drink.name}
-                                    price={drink.price}/>
+                                    price={drink.price}
+                                    context={context}/>
                     );
                 })}
             </div>
@@ -35,4 +36,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default DrinkMenu;
