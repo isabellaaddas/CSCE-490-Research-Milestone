@@ -1,4 +1,5 @@
 import DrinkMenu from '../components/DrinkMenu';
+import '../css/OrderOnline.css';
 
 const OrderOnline = () => {
     return (
