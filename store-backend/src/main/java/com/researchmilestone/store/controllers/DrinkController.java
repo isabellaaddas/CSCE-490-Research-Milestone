@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+// Allow requests from frontend port 3000 (React app)
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/drinks")
 public class DrinkController {
