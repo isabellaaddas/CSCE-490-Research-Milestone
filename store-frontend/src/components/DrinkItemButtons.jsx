@@ -1,31 +1,30 @@
-import {useState} from "react";
 import {useCart} from "../context/CartContext";
 import './../css/DrinkItemButtons.css';
 
 const DrinkItemButtons = (props) => {
-    const [counter, setCounter] = useState(0);
-    const {dispatch} = useCart();
-
-    const handleClick = (event) => {
-        event.preventDefault();
-    };
+    const {state, dispatch} = useCart();
+    
+    const cartItem = state?.cartItems?.find(cartItem => String(cartItem.id) === String(props.id));
+    const currQuantity = cartItem ? cartItem.quantity : 0;
 
     const plusOne = (e) => {
         e.preventDefault();
-        counter >= 99 ? setCounter(99):setCounter(counter + 1);
+        if (currQuantity >= 99) return;
+
         dispatch({type: 'ADD_TO_CART', payload: {id: props.id, name: props.name, price: props.price}});
     };
 
     const minusOne = (e) => {
         e.preventDefault();
-        counter <= 0 ? setCounter(0):setCounter(counter - 1);
-        dispatch({type: 'DECREMENT', payload: {id: props.id, name: props.name, price: props.price}})
+        if (currQuantity <= 0) return;
+
+        dispatch({type: 'DECREMENT_QUANTITY', payload: props.id})
     };
 
     return (
-        <div className="counter-buttons one" onClick={handleClick}>
+        <div className="counter-buttons one">
             <button className="minus" onClick={minusOne}>-</button>
-            <span className="counter">{counter}</span>
+            <span className="counter">{currQuantity}</span>
             <button className="plus" onClick={plusOne}>+</button>
         </div>
     );

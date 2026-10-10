@@ -1,6 +1,5 @@
 export const initialState = {
     cartItems: [],
-    total: 0,
 };
 
 export function CartReducer(state, action) {
@@ -8,14 +7,14 @@ export function CartReducer(state, action) {
         case 'ADD_TO_CART': {
             const item = action.payload;
             const existingItem = state.cartItems.find(
-                (cartItem) => cartItem.id === item.id
+                (cartItem) => String(cartItem.id) === String(item.id)
             );
             
             if (existingItem) {
                 return {
                     ...state,
                     cartItems: state.cartItems.map((cartItem) =>
-                        cartItem.id === item.id ?
+                        String(cartItem.id) === String(item.id) ?
                         { ...cartItem, quantity: cartItem.quantity + 1 }
                         : cartItem
                     ),
@@ -34,7 +33,7 @@ export function CartReducer(state, action) {
             return {
                 ...state,
                 cartItems: state.cartItems.map((item) =>
-                item.id === id ? { ...item, quantity: item.quantity - 1 } 
+                String(item.id) === String(id) ? { ...item, quantity: item.quantity - 1 } 
                 : item
                 ).filter((item) => item.quantity > 0),
             }
@@ -45,7 +44,7 @@ export function CartReducer(state, action) {
 
             return {
                 ...state,
-                cartItems: state.cartItems.filter((item) => item.id !== id),
+                cartItems: state.cartItems.filter((item) => String(item.id) !== String(id)),
             }
         }
 
