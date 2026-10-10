@@ -4,21 +4,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './Layout';
 import Home from './pages/Home';
 import OrderOnline from './pages/OrderOnline';
+import { CartProvider } from './context/CartContext';
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
+      <CartProvider>
+        <Routes>
 
-        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Layout />}>
 
-        <Route index element={<Home />} />
+          <Route index element={<Home />} />
 
-        <Route path="orderonline" element={<OrderOnline />} />
+          <Route path="orderonline" element={<OrderOnline />} />
 
-        </Route>
+          </Route>
 
-      </Routes>
+        </Routes>
+      </CartProvider>
     </BrowserRouter>
   );
 };
