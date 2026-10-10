@@ -1,19 +1,20 @@
 import CartSummary from "../components/CartSummary";
 import {useNavigate} from "react-router-dom";
 import {useCart} from "../context/CartContext";
+import {useState} from "react";
 import CartItem from "../components/CartItem";
 
 const Cart = () => {
     const navigate = useNavigate();
     const {state} = useCart();
-    const {CartItems} = state;
+    const CartItems = state.cartItems;
 
     if (CartItems.length === 0) {
         return (
             <div>
                 <h1>Your cart is empty.</h1>
                 <button onClick={() => 
-                    navigate('/order-online')}>Order Now
+                    navigate('/orderonline')}>Order Now
                 </button>
             </div>
         );
