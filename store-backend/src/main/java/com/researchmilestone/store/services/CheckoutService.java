@@ -1,5 +1,6 @@
 package com.researchmilestone.store.services;
 
+import com.researchmilestone.store.dtos.CheckoutRequest;
 import com.researchmilestone.store.models.Order;
 import com.researchmilestone.store.models.OrderItem;
 import com.researchmilestone.store.repositories.OrderRepository;
@@ -30,7 +31,7 @@ public class CheckoutService {
                 .sum();
 
         Order order = new Order();
-        order.setEmail(request.getEmail());
+        order.setEmail(request.getCustomerEmail());
         order.setTotalAmount(computedTotal);
         order.setStatus("COMPLETED");
 
@@ -38,7 +39,7 @@ public class CheckoutService {
         for (CheckoutRequest.ItemDTO itemDTO : request.getItems()) {
             OrderItem orderItem = new OrderItem();
             orderItem.setOrder(order);
-            orderItem.setProductId(itemDTO.getProductName());
+            orderItem.setProductId(itemDTO.getProductId());
             orderItem.setPrice(itemDTO.getPrice());
             orderItem.setQuantity(itemDTO.getQuantity());
             orderItems.add(orderItem);
